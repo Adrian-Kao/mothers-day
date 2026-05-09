@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="zh-Hant">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mother's Day Heart Puzzle</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+    <main class="page-shell">
+        <section class="game-panel" aria-label="母親節互動拼圖">
+            <div class="top-bar">
+                <div>
+                    <p class="eyebrow">Mother's Day</p>
+                    <h1>把照片拼成一顆心</h1>
+                </div>
+                <div class="progress-pill" aria-live="polite">
+                    <span id="placedCount">0</span>/<span id="totalCount">5</span>
+                </div>
+            </div>
+
+            <div class="play-area">
+                <div class="heart-board-wrap">
+                    <div id="heartBoard" class="heart-board" aria-label="心形拼圖放置區"></div>
+                    <div id="completionHint" class="completion-hint">完成後點擊愛心</div>
+                </div>
+
+                <aside class="pieces-panel" aria-label="照片拼圖碎片">
+                    <div class="pieces-heading">
+                        <span>Photo Pieces</span>
+                        <button id="shuffleButton" type="button">重新打散</button>
+                    </div>
+                    <div id="piecesTray" class="pieces-tray"></div>
+                </aside>
+            </div>
+        </section>
+
+        <section id="finalScene" class="final-scene" aria-hidden="true">
+            <canvas id="fireworksCanvas"></canvas>
+            <div id="heart3d" class="heart-3d" role="button" tabindex="0" aria-label="粉紅 3D 愛心"></div>
+            <div id="loveCard" class="love-card" aria-live="polite">
+                <p id="cardKicker" class="card-kicker">Happy Mother's Day</p>
+                <h2 id="cardTitle">媽咪，謝謝妳的愛</h2>
+                <p id="cardBody">願今天的每一束光，都把溫柔和祝福送到妳心裡。</p>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
